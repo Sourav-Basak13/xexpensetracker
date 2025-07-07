@@ -75,6 +75,12 @@ function ExpenseCard({ text, type, balance, setBalance, expense, setExpense }) {
         onClick={() => setOpen(true)}
         className={styles.expense_card_btn}
       >
+        {type === "income" && (
+          <span className={styles.btn_text}>+ Add Income</span>
+        )}
+        {type !== "income" && (
+          <span className={styles.btn_text}>+ Add Expense</span>
+        )}
         {/* <span className={styles.btn_text}>+ Add Income</span> */}
         <span className={styles.btn_text}>+ Add {type}</span>
       </Button>

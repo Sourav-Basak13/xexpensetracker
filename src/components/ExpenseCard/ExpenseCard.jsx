@@ -64,12 +64,12 @@ function ExpenseCard({ text, type, balance, setBalance, expense, setExpense }) {
       <p className={styles.expense_card_text}>
         {/* Wallet Balance:{" "} */}
         {text}:{" "}
-        <span
-          className={`${styles.expense_card_sub_text} ${styles.text_success}`}
-        >
-          {type === "income" ? _balance[0] : _expense[0]}
-        </span>
       </p>
+      <span
+        className={`${styles.expense_card_sub_text} ${styles.text_success}`}
+      >
+        {type === "income" ? _balance[0] : _expense[0]}
+      </span>
       {type === "income" && (
         <Button
           variant={type === "income" ? "success" : "error"}

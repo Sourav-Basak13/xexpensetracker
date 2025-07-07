@@ -29,10 +29,11 @@ function ExpenseCard({ text, type, balance, setBalance, expense, setExpense }) {
           message: "You can't expened more than balance",
         });
       } else {
+        const newExpense = { ...formData, _id: uuidv4() };
         let expenses = [
           ...(JSON.parse(localStorage.getItem("expenses")) || []),
         ];
-        expenses.push({ ...formData, _id: uuidv4() });
+        expenses.push(newExpense);
         localStorage.setItem("expenses", JSON.stringify(expenses));
         localStorage.setItem("balance", String(_balance[0] - +formData.price));
         _balance[1]((prev) => +prev - +formData.price);

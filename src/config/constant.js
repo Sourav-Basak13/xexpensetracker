@@ -1,5 +1,5 @@
 export const options = [
-  { value: "entertainment", label: "Entertainment" },
-  { value: "food", label: "Food" },
-  { value: "travel", label: "Travel" },
+  { value: "Entertainment", label: "Entertainment" },
+  { value: "Food", label: "Food" },
+  { value: "Travel", label: "Travel" },
 ];

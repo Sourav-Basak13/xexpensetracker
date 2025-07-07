@@ -50,13 +50,13 @@ function ExpenseTracker() {
     };
     _expenses[0].forEach((element) => {
       switch (element.category) {
-        case "entertainment":
+        case "Entertainment":
           count.Entertainment = count.Entertainment + element.price;
           break;
-        case "food":
+        case "Food":
           count.Food = count.Food + element.price;
           break;
-        case "travel":
+        case "Travel":
           count.Travel = count.Travel + element.price;
           break;
       }

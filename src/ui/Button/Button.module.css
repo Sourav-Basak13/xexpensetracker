@@ -1,0 +1,19 @@
+.btn {
+  opacity: 1;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 31px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
+
+.success {
+  background: linear-gradient(90deg, #b5dc52 0%, #89e148 100%);
+}
+
+.error {
+  background: linear-gradient(90deg, #ff9595 0%, #ff4747 80%, #ff3838 100%);
+}

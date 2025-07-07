@@ -1,0 +1,18 @@
+.top_expenses_wrapper {
+  height: 356px !important;
+  background: #ffffff;
+  border-radius: 15px;
+  /* padding: 30px 6px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .top_expenses_wrapper {
+    width: 100% !important;
+  }
+  .top_expenses_wrapper :global(.recharts-wrapper) {
+    max-width: 100% !important;
+  }
+}

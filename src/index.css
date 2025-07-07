@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700;900&display=swap");
+
+:root {
+  --base-background: #3b3b3b;
+  --base-white: #ffffff;
+  --base-black: #000000;
+  --base-color: #ffffff;
+  --bg-expense-tracker: #626262;
+  --box-shadow-expense-tracker: #00000040;
+  --bg-expense-card: #9b9b9b;
+  --text-success: #9dff5b;
+  --text-warning: #f4bb4a;
+  --bg-entetainment: #ff9304;
+  --bg-food: #a000ff;
+  --bg-travel: #fde006;
+}
+* {
+  margin: 0;
+  font-family: "Ubuntu", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--base-color);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Ubuntu", "Courier New",
+    monospace;
+}

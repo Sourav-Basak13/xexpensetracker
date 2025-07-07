@@ -1,0 +1,74 @@
+.transactions_wrapper {
+  opacity: 1;
+  border-radius: 15px;
+  background: var(--base-white);
+  box-shadow: 0px 4px 4px 0px var(--box-shadow-expense-tracker);
+  padding: 30px 27px;
+}
+
+.no_transaction_list {
+  color: var(--base-black);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 20px 0;
+  list-style: none;
+}
+
+.pageItem {
+  display: inline-block;
+}
+
+.pageLink {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f1f1;
+  color: #333;
+  font-weight: 500;
+  text-decoration: none;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.pageLink:hover {
+  background-color: #e0e0e0;
+}
+
+.active .pageLink {
+  background-color: #43967b;
+  color: white;
+}
+
+.navItem {
+  display: inline-block;
+}
+
+.navLink {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f1f1;
+  border-radius: 50%;
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.navLink:hover {
+  background-color: #e0e0e0;
+}

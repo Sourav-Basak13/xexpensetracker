@@ -1,4 +1,4 @@
-import React, { useContext, useMemo } from "react";
+import React, { useCallback, useContext, useMemo } from "react";
 import styles from "./TopExpenses.module.css";
 import CustomBarChart from "../../ui/BarChart/BarChart";
 import { TotalContext } from "../../context/TotalContext";
@@ -61,7 +61,11 @@ function TopExpenses() {
     });
   }, [_expenses[0]]);
 
-  console.log(data, "datata");
+  const getWidth = useCallback(() => {
+    if (width <= 599) return 110;
+    else if (width <= 768) return 65;
+    else return 110;
+  }, [width]);
 
   return (
     <CustomBarChart
@@ -78,7 +82,7 @@ function TopExpenses() {
         dataKey: "name",
         axisLine: false,
         tickLine: false,
-        width: width <= 768 ? 65 : 110,
+        width: getWidth(),
       }}
       XAxisConfig={{
         type: "number",

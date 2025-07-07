@@ -67,7 +67,8 @@ function ExpenseCard({ text, type, balance, setBalance, expense, setExpense }) {
         <span
           className={`${styles.expense_card_sub_text} ${styles.text_success}`}
         >
-          {/* ₹4500 */}₹{type === "income" ? _balance[0] : _expense[0]}
+          {/* ₹4500 */}
+          {type === "income" ? _balance[0] : _expense[0]}
         </span>
       </p>
       {type === "income" && (

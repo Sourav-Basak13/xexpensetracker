@@ -53,9 +53,9 @@ function ExpenseCard({ text, type, balance, setBalance, expense, setExpense }) {
   );
 
   const handleAddBalance = (event) => {
-    _balance[1]((prev) => +prev + +event.target[0].value);
     localStorage.setItem("balance", +_balance[0] + +event.target[0].value);
-    setExtraBalance("");
+    _balance[1]((prev) => +prev + +event.target[0].value);
+    setExtraBalance(0);
     setOpen(false);
   };
 
@@ -201,7 +201,7 @@ function ExpenseCard({ text, type, balance, setBalance, expense, setExpense }) {
                 gridTemplateColumns: "repeat(3, 1fr)",
               }}
             >
-              <CustomInput
+              <input
                 type="number"
                 name="balance"
                 placeholder="Income Amount"

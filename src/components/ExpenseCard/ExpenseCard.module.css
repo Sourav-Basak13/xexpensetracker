@@ -35,7 +35,16 @@
   color: var(--text-warning);
 }
 
-.btn_text {
+/* .btn_text {
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: capitalize;
+} */
+
+.expense_card_btn {
   font-weight: 700;
   font-style: Bold;
   font-size: 16px;

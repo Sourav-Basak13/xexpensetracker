@@ -187,6 +187,7 @@ function TransactionCard({ _id, title, price, category, date }) {
             <CustomInput
               type="date"
               placeholder="mm/dd/yyyy"
+              name="date"
               value={formData.date}
               onChange={(event) =>
                 setFormData((prev) => ({

@@ -105,7 +105,7 @@ function ExpenseCard({ text, type, balance, setBalance, expense, setExpense }) {
           <form onSubmit={handleAddExpense}>
             <h2 className={styles.expense_modal_title}>Add Expenses</h2>
             <div className={styles.expense_modal_content}>
-              <input
+              <CustomInput
                 type="text"
                 name="title"
                 placeholder="Title"
@@ -119,7 +119,7 @@ function ExpenseCard({ text, type, balance, setBalance, expense, setExpense }) {
                 }
                 required
               />
-              <input
+              <CustomInput
                 type="text"
                 name="price"
                 placeholder="Price"
@@ -165,9 +165,10 @@ function ExpenseCard({ text, type, balance, setBalance, expense, setExpense }) {
                 ))}
               </select>
 
-              <input
+              <CustomInput
                 type="date"
                 placeholder="mm/dd/yyyy"
+                name="date"
                 value={formData.date}
                 onChange={(event) =>
                   setFormData((prev) => ({

@@ -70,20 +70,32 @@ function ExpenseCard({ text, type, balance, setBalance, expense, setExpense }) {
           {/* ₹4500 */}₹{type === "income" ? _balance[0] : _expense[0]}
         </span>
       </p>
-      <Button
-        variant={type === "income" ? "success" : "error"}
-        onClick={() => setOpen(true)}
-        className={styles.expense_card_btn}
-      >
-        {type === "income" && (
+      {type === "income" && (
+        <Button
+          variant={type === "income" ? "success" : "error"}
+          onClick={() => setOpen(true)}
+          className={styles.expense_card_btn}
+        >
+          + Add Income
+        </Button>
+      )}
+      {/* {type === "income" && (
           <span className={styles.btn_text}>+ Add Income</span>
-        )}
-        {type !== "income" && (
-          <span className={styles.btn_text}>+ Add Expense</span>
-        )}
-        {/* <span className={styles.btn_text}>+ Add Income</span> */}
-        <span className={styles.btn_text}>+ Add {type}</span>
-      </Button>
+        )} */}
+      {/* {type !== "income" && (
+        <span className={styles.btn_text}>+ Add Expense</span>
+      )} */}
+      {/* <span className={styles.btn_text}>+ Add Income</span> */}
+      {/* <span className={styles.btn_text}>+ Add {type}</span> */}
+      {type !== "income" && (
+        <Button
+          variant={type === "income" ? "success" : "error"}
+          onClick={() => setOpen(true)}
+          className={styles.expense_card_btn}
+        >
+          + Add Expense
+        </Button>
+      )}
       <CustomModal
         className={styles.expense_modal}
         open={open}

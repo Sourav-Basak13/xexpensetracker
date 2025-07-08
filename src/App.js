@@ -10,16 +10,20 @@ function App() {
   const _balance = useState("5000");
   const _expense = useState("0");
   const _expenses = useState([]);
+  const [isMounted, setIsMounted] = useState(false);
   useEffect(() => {
     _expenses[1](JSON.parse(localStorage.getItem("expenses")));
     _balance[1](JSON.parse(localStorage.getItem("balance")));
+    setIsMounted(true);
   }, []);
 
   useEffect(() => {
-    _expenses[0] &&
-      localStorage.setItem("expenses", JSON.stringify(_expenses[0]));
-    _balance[0] && localStorage.setItem("balance", _balance[0]);
-  }, [_balance[0], _expenses[0]]);
+    if (isMounted) {
+      _expenses[0] &&
+        localStorage.setItem("expenses", JSON.stringify(_expenses[0]));
+      _balance[0] && localStorage.setItem("balance", _balance[0]);
+    }
+  }, [_balance[0], _expenses[0], isMounted]);
   return (
     <TotalContext.Provider
       value={{

@@ -7,13 +7,15 @@ import { useEffect, useState } from "react";
 import { TotalContext } from "./context/TotalContext";
 
 function App() {
-  const _balance = useState("5000");
+  const _balance = useState("0");
   const _expense = useState("0");
   const _expenses = useState([]);
   const [isMounted, setIsMounted] = useState(false);
   useEffect(() => {
-    _expenses[1](JSON.parse(localStorage.getItem("expenses")));
-    _balance[1](JSON.parse(localStorage.getItem("balance")));
+    const expenses = JSON.parse(localStorage.getItem("expenses"));
+    const balance = JSON.parse(localStorage.getItem("balance"));
+    _expenses[1](expenses ?? []);
+    _balance[1](balance ?? "5000");
     setIsMounted(true);
   }, []);
 

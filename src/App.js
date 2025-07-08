@@ -5,8 +5,6 @@ import Transactions from "./components/Transactions/Transactions";
 import TopExpenses from "./components/TopExpenses/TopExpenses";
 
 function App() {
-  localStorage.setItem("expenses", JSON.stringify([]));
-  localStorage.setItem("balance", "5000");
   return (
     <WebWrapper>
       <h1 className="expense_tracker_heading">Expense Tracker</h1>

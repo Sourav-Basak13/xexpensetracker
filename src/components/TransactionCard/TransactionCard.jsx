@@ -92,11 +92,11 @@ function TransactionCard({ _id, title, price, category, date }) {
   return (
     <div className={styles.transaction_card_wrapper}>
       <div className={styles.transaction_item}>
-        {category === "food" && <PiPizza className={styles.card_icon} />}
-        {category === "entertainment" && (
+        {category === "Food" && <PiPizza className={styles.card_icon} />}
+        {category === "Entertainment" && (
           <IoGiftOutline className={styles.card_icon} />
         )}
-        {category === "travel" && (
+        {category === "Travel" && (
           <CiRollingSuitcase className={styles.card_icon} />
         )}
         <div className={styles.transaction_item_title_date}>

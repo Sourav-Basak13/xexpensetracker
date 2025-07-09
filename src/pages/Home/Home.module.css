@@ -39,10 +39,10 @@
     flex-direction: column;
     row-gap: 30px;
   }
-}
-
-@media (max-width: 768px) {
   .top_expenses_wrapper {
     width: 100% !important;
   }
+}
+
+@media (max-width: 768px) {
 }

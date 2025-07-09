@@ -65,4 +65,10 @@
   .expense_wrap {
     padding: 8px;
   }
+  .responsive_container {
+    width: 330px !important;
+  }
+  .pie_chart {
+    width: 330px !important;
+  }
 }

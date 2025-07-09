@@ -94,7 +94,9 @@ function ExpenseCard({ text, type, balance, setBalance, expense, setExpense }) {
         {type === "expense" && (
           <form onSubmit={handleAddExpense}>
             <h2 className={styles.expense_modal_title}>Add Expenses</h2>
-            <div className={styles.expense_modal_content}>
+            <div
+              className={`${styles.expense_modal_content} ${styles.add_expense_content}`}
+            >
               <CustomInput
                 type="text"
                 name="title"
@@ -187,10 +189,7 @@ function ExpenseCard({ text, type, balance, setBalance, expense, setExpense }) {
           <form onSubmit={handleAddBalance}>
             <h2 className={styles.expense_modal_title}>Add Balance</h2>
             <div
-              className={styles.expense_modal_content}
-              style={{
-                gridTemplateColumns: "repeat(3, 1fr)",
-              }}
+              className={`${styles.expense_modal_content} ${styles.add_income_content}`}
             >
               <input
                 type="number"

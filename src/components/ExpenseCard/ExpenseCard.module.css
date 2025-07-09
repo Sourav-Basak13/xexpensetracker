@@ -76,6 +76,9 @@
   grid-template-columns: repeat(2, 1fr);
   column-gap: 14px;
   row-gap: 22px;
+  &.add_income_content {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .expense_input {
@@ -170,12 +173,26 @@
   .expense_card_sub_text {
     font-size: 24px;
   }
+
+  .add_income_content .expense_balance_input {
+    width: 43vw;
+  }
+  .add_income_content .expense_add_balance {
+    width: 24vw;
+  }
 }
 @media (max-width: 1099px) {
   .expense_card_text,
   .expense_card_sub_text {
     font-size: 18px;
   }
+  /* .expense_balance_input {
+    width: 50vw;
+    grid-column: 1 / span 3;
+  }
+  .expense_add_balance {
+    width: 20vw;
+  } */
 }
 
 @media (max-width: 849px) {
@@ -186,10 +203,55 @@
   .expense_card_btn {
     padding: 10px 15px;
   }
+
+  /* .expense_balance_input {
+    width: 65vw;
+    grid-column: 1 / span 3;
+  }
+  .expense_add_balance {
+    width: 30vw;
+  } */
+}
+
+@media (max-width: 768px) {
+  .add_income_content {
+    grid-template-columns: 1fr !important;
+  }
+  .add_income_content .expense_balance_input {
+    width: 43vw;
+  }
+  .add_income_content .expense_add_balance {
+    width: 100%;
+  }
+  .add_income_content .expense_cancel {
+    width: 100%;
+  }
 }
 
 @media (max-width: 499px) {
   .expense_card {
+    width: 100%;
+  }
+
+  .add_income_content .expense_balance_input {
+    width: 60vw;
+  }
+  .add_income_content .expense_add_balance {
+    width: 100%;
+  }
+  .add_income_content .expense_cancel {
+    width: 100%;
+  }
+
+  .add_expense_content {
+    grid-template-columns: 1fr;
+  }
+
+  .add_expense_content .expense_input {
+    width: 60vw;
+  }
+
+  .add_expense_content .expense_cancel {
     width: 100%;
   }
 }

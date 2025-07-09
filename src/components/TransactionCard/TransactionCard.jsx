@@ -128,7 +128,9 @@ function TransactionCard({ _id, title, price, category, date }) {
       >
         <form onSubmit={handleEditTransaction}>
           <h2 className={styles.expense_modal_title}>Edit Expenses</h2>
-          <div className={styles.expense_modal_content}>
+          <div
+            className={`${styles.expense_modal_content} ${styles.edit_content}`}
+          >
             <CustomInput
               type="text"
               name="title"
@@ -223,13 +225,15 @@ function TransactionCard({ _id, title, price, category, date }) {
           <p className={styles.expense_modal_text}>
             Are you sure want to delete expence?
           </p>
-          <div className={styles.expense_modal_content}>
+          <div
+            className={`${styles.expense_modal_content} ${styles.delete_confirm_content}`}
+          >
             <Button
               type="button"
               className={styles.expense_add}
               onClick={() => handleDeleteTransaction(formData._id)}
             >
-              Delete Expense
+              Delete
             </Button>
             <Button
               className={styles.expense_cancel}

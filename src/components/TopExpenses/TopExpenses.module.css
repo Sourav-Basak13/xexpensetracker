@@ -8,11 +8,28 @@
   justify-content: space-between;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 899px) {
   .top_expenses_wrapper {
-    width: 100% !important;
+    width: 95vw !important;
   }
   .top_expenses_wrapper :global(.recharts-wrapper) {
-    max-width: 100% !important;
+    width: 95vw !important;
+  }
+}
+
+@media (max-width: 599px) {
+  .top_expenses_wrapper {
+    width: 93vw !important;
+  }
+  .top_expenses_wrapper :global(.recharts-wrapper) {
+    width: 93vw !important;
+  }
+}
+@media (max-width: 459px) {
+  .top_expenses_wrapper {
+    width: 90vw !important;
+  }
+  .top_expenses_wrapper :global(.recharts-wrapper) {
+    width: 90vw !important;
   }
 }

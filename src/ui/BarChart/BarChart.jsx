@@ -10,7 +10,7 @@ function CustomBarChart({
   className,
 }) {
   return (
-    <ResponsiveContainer width={417} height={356} className={className}>
+    <ResponsiveContainer width="100%" height={356} className={className}>
       <BarChart {...barChartConfig}>
         {/* <XAxis dataKey="name" axisLine={false} tickLine={false} /> */}
         <YAxis {...YAxisConfig} className={styles.bar_YAxis} />

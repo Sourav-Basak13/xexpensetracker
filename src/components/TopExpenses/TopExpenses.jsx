@@ -63,7 +63,7 @@ function TopExpenses() {
 
   const getWidth = useCallback(() => {
     if (width <= 599) return 110;
-    else if (width <= 768) return 65;
+    else if (width <= 768) return 110;
     else return 110;
   }, [width]);
 
@@ -71,11 +71,11 @@ function TopExpenses() {
     <CustomBarChart
       className={styles.top_expenses_wrapper}
       barChartConfig={{
-        width: 150,
-        height: 40,
+        width: 400,
+        height: 300,
         data,
         layout: "vertical",
-        barCategoryGap: 40,
+        barCategoryGap: 0,
       }}
       YAxisConfig={{
         type: "category",

@@ -99,9 +99,10 @@
 }
 .expense_modal {
   padding: 40px !important;
-  inset: 30% !important;
+  inset: 50% !important;
   background: #efefefd9;
   border-radius: 15px !important;
+  transform: translate(-50%, -50%);
 }
 
 .expense_modal_title {
@@ -211,4 +212,26 @@
 .expense_modal_text {
   color: var(--base-black);
   margin-bottom: 16px;
+}
+
+@media (max-width: 499px) {
+  .transaction_card_wrapper {
+    flex-direction: column;
+    row-gap: 15px;
+  }
+  .edit_content {
+    grid-template-columns: 1fr;
+  }
+
+  .edit_content .expense_input {
+    width: 60vw;
+  }
+
+  .edit_content .expense_cancel {
+    width: 100%;
+  }
+
+  .expense_modal:has(.delete_confirm_content) {
+    padding: 30px !important;
+  }
 }

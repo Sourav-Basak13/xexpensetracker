@@ -47,6 +47,8 @@ function ExpenseTracker() {
   const getRadius = useCallback(() => {
     if (width <= 1099 && width > 899) return 130;
     else if (width <= 899 && width > 768) return 140;
+    else if (width <= 768 && width > 400) return 100;
+    else if (width <= 400) return 80;
     else return 100;
   }, [width]);
 

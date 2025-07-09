@@ -43,6 +43,7 @@ function App() {
           <div className="transactions_wrapper">
             <h3 className="transactions_heading">Recent Transactions</h3>
             <Transactions />
+            Gym
           </div>
           <div className="top_expenses_wrapper">
             <h3 className="top_expenses_heading">Top Expenses</h3>

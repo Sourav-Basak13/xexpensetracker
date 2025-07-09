@@ -100,8 +100,8 @@ function TransactionCard({ _id, title, price, category, date }) {
           <CiRollingSuitcase className={styles.card_icon} />
         )}
         <div className={styles.transaction_item_title_date}>
-          {/* <p className={styles.transaction_item_title}>{title}</p> */}
-          {title}
+          <p className={styles.transaction_item_title}>{title}</p>
+          {/* {title} */}
           <p className={styles.transaction_item_date}>
             {dayJsExtend(date).format("MMM DD, YYYY")}
           </p>

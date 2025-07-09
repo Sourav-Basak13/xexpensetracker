@@ -34,8 +34,6 @@ function ExpenseCard({ text, type, balance, setBalance, expense, setExpense }) {
           ...(JSON.parse(localStorage.getItem("expenses")) || []),
         ];
         expenses.push(newExpense);
-        localStorage.setItem("expenses", JSON.stringify(expenses));
-        localStorage.setItem("balance", String(_balance[0] - +formData.price));
         _balance[1]((prev) => +prev - +formData.price);
         _expense[1]((prev) => +prev + +formData.price);
         _expenses[1]((prev) => [...expenses]);
@@ -53,7 +51,6 @@ function ExpenseCard({ text, type, balance, setBalance, expense, setExpense }) {
   );
 
   const handleAddBalance = (event) => {
-    localStorage.setItem("balance", +_balance[0] + +event.target[0].value);
     _balance[1]((prev) => +prev + +event.target[0].value);
     setExtraBalance(0);
     setOpen(false);
@@ -80,14 +77,6 @@ function ExpenseCard({ text, type, balance, setBalance, expense, setExpense }) {
           + Add Income
         </Button>
       )}
-      {/* {type === "income" && (
-          <span className={styles.btn_text}>+ Add Income</span>
-        )} */}
-      {/* {type !== "income" && (
-        <span className={styles.btn_text}>+ Add Expense</span>
-      )} */}
-      {/* <span className={styles.btn_text}>+ Add Income</span> */}
-      {/* <span className={styles.btn_text}>+ Add {type}</span> */}
       {type !== "income" && (
         <Button
           variant={type === "income" ? "success" : "error"}

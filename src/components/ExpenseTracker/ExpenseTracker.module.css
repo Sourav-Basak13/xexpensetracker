@@ -17,6 +17,7 @@
   height: 199px;
 }
 .pie_chart :global(.recharts-legend-wrapper) {
+  width: 100% !important;
   bottom: -15px !important;
 }
 .pie_chart :global(.recharts-legend-item-text) {
@@ -48,14 +49,8 @@
   }
 }
 
-@media (max-width: 999px) {
-  .responsive_container :global(.recharts-legend-wrapper) {
-    left: -60px;
-  }
-}
-
-@media (max-width: 999px) {
-  .responsive_container :global(.recharts-legend-wrapper) {
-    left: 14px;
+@media (max-width: 499px) {
+  .expense_wrap {
+    padding: 8px;
   }
 }

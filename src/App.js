@@ -14,14 +14,19 @@ function App() {
   const _expenses = useState(
     JSON.parse(localStorage.getItem("expenses")) ?? []
   );
-  // const [isMounted, setIsMounted] = useState(false);
-  // useEffect(() => {
-  //   const expenses = JSON.parse(localStorage.getItem("expenses"));
-  //   const balance = JSON.parse(localStorage.getItem("balance"));
-  //   _expenses[1](expenses ?? []);
-  //   _balance[1](balance ?? "5000");
-  //   setIsMounted(true);
-  // }, []);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    if (!isMounted) {
+      setIsMounted(true);
+      let totalExpense =
+        Array.isArray(_expenses[0]) &&
+        _expenses[0]?.reduce((acc, expense) => {
+          return acc + expense?.price;
+        }, 0);
+      _expense[1](String(totalExpense));
+    }
+  }, [_expenses[0]]);
 
   useEffect(() => {
     _expenses[0] &&
@@ -43,7 +48,6 @@ function App() {
           <div className="transactions_wrapper">
             <h3 className="transactions_heading">Recent Transactions</h3>
             <Transactions />
-            Gym
           </div>
           <div className="top_expenses_wrapper">
             <h3 className="top_expenses_heading">Top Expenses</h3>

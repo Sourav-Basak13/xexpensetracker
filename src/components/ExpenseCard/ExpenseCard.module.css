@@ -55,7 +55,8 @@
 
 .expense_modal {
   padding: 40px !important;
-  inset: 30% !important;
+  inset: 50% !important;
+  transform: translate(-50%, -50%);
   background: #efefefd9;
   border-radius: 15px !important;
 }
@@ -184,5 +185,11 @@
   }
   .expense_card_btn {
     padding: 10px 15px;
+  }
+}
+
+@media (max-width: 499px) {
+  .expense_card {
+    width: 100%;
   }
 }

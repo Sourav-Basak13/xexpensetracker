@@ -34,11 +34,14 @@
   margin-bottom: 10px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 899px) {
   .bottom_container {
     flex-direction: column;
     row-gap: 30px;
   }
+}
+
+@media (max-width: 768px) {
   .top_expenses_wrapper {
     width: 100% !important;
   }

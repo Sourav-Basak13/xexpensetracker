@@ -1,8 +1,9 @@
-import React, { useContext, useMemo } from "react";
+import React, { useCallback, useContext, useMemo } from "react";
 import styles from "./ExpenseTracker.module.css";
 import { Cell, Legend, Pie, PieChart, ResponsiveContainer } from "recharts";
 import ExpenseCard from "../ExpenseCard/ExpenseCard";
 import { TotalContext } from "../../context/TotalContext";
+import useDimension from "../../hooks/general/useDimension";
 
 // const data = [
 //   { name: "Entertainment", value: 2400 },
@@ -41,6 +42,13 @@ const renderCustomizedLabel = ({
 
 function ExpenseTracker() {
   const { _expenses } = useContext(TotalContext);
+  const { width } = useDimension();
+
+  const getRadius = useCallback(() => {
+    if (width <= 1099 && width > 899) return 110;
+    else if (width <= 899 && width > 768) return 120;
+    else return 100;
+  }, [width]);
 
   const data = useMemo(() => {
     const count = {
@@ -86,7 +94,7 @@ function ExpenseTracker() {
             cy="50%"
             labelLine={false}
             label={renderCustomizedLabel}
-            outerRadius={100}
+            outerRadius={getRadius()}
             dataKey="value"
             nameKey="name"
             legendType="rect"

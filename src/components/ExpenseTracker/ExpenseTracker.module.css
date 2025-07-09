@@ -12,10 +12,7 @@
   position: relative;
   top: -40px;
 }
-.pie_chart :global(.recharts-pie) {
-  width: 199px;
-  height: 199px;
-}
+
 .pie_chart :global(.recharts-legend-wrapper) {
   width: 100% !important;
   bottom: -15px !important;
@@ -36,6 +33,18 @@
   line-height: 100%;
 }
 
+@media (max-width: 1099px) {
+  .pie_chart {
+    width: 300px !important;
+  }
+}
+
+@media (max-width: 899px) {
+  .pie_chart {
+    width: 240px !important;
+  }
+}
+
 @media (max-width: 768px) {
   .expense_wrap {
     flex-direction: column;
@@ -46,6 +55,9 @@
   }
   .responsive_container {
     margin-top: 50px;
+  }
+  .pie_chart {
+    width: 400px !important;
   }
 }
 
